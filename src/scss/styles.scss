@@ -1,5 +1,306 @@
-$bg-color: pink;
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;500;700&display=swap');
+// font-family: 'Forum', cursive;
+// font-family: 'Roboto', sans-serif;
+
+$bg-color-dark: #030303;
+$header-color: #9D8665;
+$font-header: 'Forum', cursive;
+$font-content: 'Roboto', sans-serif;
+
+%section {
+    margin: 0;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    //border: 1px solid yellow;
+}
+
+%dark-section {
+    background-color: $bg-color-dark;
+
+}
+
+%cotainer {
+  //  border: 1px solid red;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    
+}
+
+
+@mixin noStyling {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin noStylingHeader {
+    @include noStyling();
+    font-family: $font-header;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin separator($width: 100%, $height: 3px) {
+    background-color: #710707;
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($justify-content: space-between){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
 
 body {
- background: $bg-color;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1920px; 
+}
+
+h2 {
+    @include noStylingHeader();
+    font-size: 80px;
+    line-height: 90px;
+    color: $header-color;
+}
+
+.container {
+    @extend %cotainer;
+}
+
+.header {
+    background-color: $bg-color-dark;
+    padding-top: 74px;
+    padding-bottom: 76px;
+    .header-container {font-style: normal;
+        font-weight: normal;
+        @extend %cotainer;
+        @include flex();
+        height: 50px;   
+    }
+}
+
+.logo {
+    @include flex();
+    height: 50px;
+    .img-logo {
+        height: 26px;
+        width: 49px;
+        background-image: url("../assets/svg/Vector.svg");
+        margin-bottom: 7px;
+    }
+    .text-logo {
+        margin-left: 20px;
+        font-family: $font-header;
+        font-size: 28px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #FFFFFF;background-color: $bg-color-dark;
+    }
+}
+
+.nav {
+    width: 720px;
+    ul {
+        @include flex();
+        padding: 0;
+    }
+    a {/* identical to box height, or 112% */
+
+
+        font-family: $font-content;
+        font-size: 22px;
+        font-weight: 100;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #FFFFFF
+    }
+    
+}
+
+.welcome-section {
+    @extend %section, %dark-section;
+   // position:relative;
+   // border: 1px solid yellow;
+    height: 750px;
+    padding: 0;
+  
+        background: url("../assets/img/background.jpg") no-repeat;
+        background-position: 100% 100%;
+        background-color: $bg-color-dark;
+ 
+
+    .container {
+        padding-top: 114px;
+        color: #FFFFFF;
+       // border: 1px solid yellow;
+        h1 {
+            @include noStylingHeader();
+        }
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        .txt-heading {
+            font-size: 80px;
+            line-height: 90px;
+        
+        }
+        .txt-description {
+            padding-top: 26px;
+            padding-bottom: 75px;
+            font-family: $font-content;
+            font-weight: 300;
+            font-size: 28px;
+            line-height: 33px;
+            letter-spacing: 2px;
+        }
+        .welcome-button {
+            @include flex(center);
+            width: 360px;
+            height: 75px;
+            background-color: #710707;
+            border-radius: 10px;
+            font-family: $font-content;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 22px;
+            line-height: 26px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.visiting-section {
+    @extend %section;
+    padding-bottom: 0px;
+    .separation-line {
+        @include separator();
+        margin-top: 25px;
+        margin-bottom: 75px;
+    }
+    .visiting-cards {
+        @include flex();
+        flex-wrap: wrap;
+        .visiting-card {
+            max-width: 440px;
+            margin-bottom: 3px;
+            margin-bottom: 75px;
+            img {
+                width: 100%;
+            }
+            .visiting-name {
+                @include noStylingHeader();
+                font-size: 32px;
+                line-height: 35px;
+                margin-top: 22px;
+                margin-bottom: 9px;
+            }
+            .card-separation-line {
+                @include separator(68%, 2px);
+            }
+            p {
+                @include noStyling();
+                font-family: $font-content;
+                font-weight: 100;
+                margin-top: 10px;
+            }
+            .visiting-type {
+                font-size: 22px;
+                line-height: 26px;
+
+            }
+            .visiting-type-description {
+                font-size: 18px;
+                line-height: 21px;
+            }
+            
+        }
+    }
+    
+}
+
+.explore-section {
+    @extend %section, %dark-section;
+    .container {
+        display: flex;
+        img {
+            padding-top: 15px;
+        }
+        .explore-content {
+            h2 {
+                color: #FFFFFF;
+            }
+            padding-right: 60px;
+            .separation-line {
+                @include separator();
+                margin-top: 25px;
+                margin-bottom: 75px;
+            }
+            p {
+                color: #FFFFFF;
+                margin-bottom: 25px;
+                padding-right: 5px;
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: 22px;
+                line-height: 38px;
+                .color-text {
+                    color: $header-color;
+                }
+            }
+        }
+        
+    }
+    
+
+}
+
+.video-section {
+    @extend %section;
+    .container {
+        margin-top: 15px;
+        iframe {
+            width: 100%;
+            height: 714px;
+            margin-bottom: 35px;
+        }   
+        .video-content {
+            @include flex();
+            .video-text {
+                width: 50%;
+            }
+        }
+    }
+
+}
+
+.tickets-section {
+    @extend %section, %dark-section;
+    height: 750px;
+}
+
+.contacts-section {
+    @extend %section;
+    height: 750px;
+}
+
+.footer {
+    background-color: $bg-color-dark;
+    .footer-container {
+        @extend %cotainer;
+        @include flex();
+        
+        
+        height: 300px;
+    }
 }

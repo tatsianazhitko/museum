@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="<%=require('./assets/img/favicon.ico')%>">
+    <title>museum</title>
 </head>
+
 <body>
-    <h1>Hello world!</h1>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="img-logo"></div>
+                <span class="text-logo">louvre</span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#visiting" class="visiting-nav">Visiting</a></li>
+                    <li><a href="#explore" class="explore-nav">Explore</a></li>
+                    <li><a href="#video" class="video-nav">Video</a></li>
+                    <li><a href="#tickets" class="tickets-nav">Tickets</a></li>
+                    <li><a href="#contacts" class="contacts-nav">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="welcome-section">
+            <div class="container">
+                <div class="welcome-txt">
+                    <h1 class="txt-heading">
+                        <p>Welcome</p>
+                        <p>to the Louvre</p>
+                    </h1>
+                    
+                    <p class="txt-description">From the castle to the museum</p>
+                </div>
+                <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
+                    class="welcome-button"><span>Discover the Louvre</span></a>
+            </div>
+        </section>
+        <section class="visiting-section" id="visiting">
+            <div class="container">
+                <h2>Virtual tour</h2>
+                <div class="separation-line"></div>
+                <section class="visiting-cards">
+                    <div class="visiting-card">
+                        <img src="<%=require('./assets/img/Royal Palace.jpg')%>" alt="Royal Palace">
+                        <h3 class="visiting-name">Royal Palace</h3>
+                        <div class="card-separation-line"></div>
+                        <p class="visiting-type">360° Virtual Tour</p>
+                        <p class="visiting-type-description">Google Street Panorama View</p>
+                    </div>
+                    <div class="visiting-card">
+                        <img src="<%=require('./assets/img/Denon Wing.jpg')%>" alt="Denon Wing">
+                        <h3 class="visiting-name">Denon Wing</h3>
+                        <div class="card-separation-line"></div>
+                        <p class="visiting-type">360° Virtual Tour</p>
+                        <p class="visiting-type-description">Google Street Panorama View</p>
+                    </div>
+                    <div class="visiting-card">
+                        <img src="<%=require('./assets/img/Colonnade Perrault.jpg')%>" alt="Colonnade Perrault">
+                        <h3 class="visiting-name">Colonnade Perrault</h3>
+                        <div class="card-separation-line"></div>
+                        <p class="visiting-type">360° Virtual Tour</p>
+                        <p class="visiting-type-description">Google Street Panorama View</p>
+                    </div>
+                    <div class="visiting-card">
+                        <img src="<%=require('./assets/img/Greek hall.jpg')%>" alt="Greek hall">
+                        <h3 class="visiting-name">Greek hall</h3>
+                        <div class="card-separation-line"></div>
+                        <p class="visiting-type">360° Virtual Tour</p>
+                        <p class="visiting-type-description">Google Street Panorama View</p>
+                    </div>
+                    <div class="visiting-card">
+                        <img src="<%=require('./assets/img/Mona Lisa.jpg')%>" alt="Mona Lisa">
+                        <h3 class="visiting-name">Mona Lisa</h3>
+                        <div class="card-separation-line"></div>
+                        <p class="visiting-type">360° Virtual Tour</p>
+                        <p class="visiting-type-description">Google Street Panorama View</p>
+                    </div>
+                    <div class="visiting-card">
+                        <img src="<%=require('./assets/img/Night Palace.jpg')%>" alt="Night Palace">
+                        <h3 class="visiting-name">Night Palace</h3>
+                        <div class="card-separation-line"></div>
+                        <p class="visiting-type">360° Virtual Tour</p>
+                        <p class="visiting-type-description">Google Street Panorama View</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="explore-section" id="explore">
+            <div class="container">
+                <section class="explore-content">
+                    <h2>Picture explore</h2>
+                    <div class="separation-line"></div>
+                    <article>
+                        <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading  artist of the Spanish Golden Age.</p>
+                        <p>It was cleaned in 1984 to remove a <span class="color-text">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+                        <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+                    </article>
+                </section>
+                <img src="<%=require('./assets/img/Picture explore.jpg')%>" alt="Picture explore">
+            </div>
+        </section>
+        <section class="video-section" id="video">
+            <div class="container">
+                <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU"  ></iframe>
+                <section class="video-content">
+                    <h2>Video journey</h2>
+                    <div class="video-text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</div>
+                </section>
+            </div>
+        </section>
+        <section class="tickets-section" id="tickets">
+            <div class="container"></div>
+        </section>
+        <section class="contacts-section" id="contacts">
+            <div class="container"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container"></div>
+    </footer>
 </body>
+
 </html>
