@@ -12,7 +12,7 @@ module.exports = {
   module: {
       rules: [
         {
-          test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+          test: /\.(?:ico|gif|png|jpg|jpeg|svg|mp4)$/i,
           type: 'asset/resource',
         },
         {
@@ -27,6 +27,34 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({
+      filename: 'tours/tour1.html',
+      template: './src/tours/tour1.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'tours/tour2.html',
+      template: './src/tours/tour2.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'tours/tour3.html',
+      template: './src/tours/tour3.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'tours/tour4.html',
+      template: './src/tours/tour4.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'tours/tour5.html',
+      template: './src/tours/tour5.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'tours/tour6.html',
+      template: './src/tours/tour6.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'tours/tour7.html',
+      template: './src/tours/tour7.html'
+    }),
     new MiniCssExtractPlugin({ filename: 'styles.css' }),
   ],
 };

@@ -2,129 +2,261 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="<%=require('./assets/img/favicon.ico')%>">
-    <title>museum</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="<%=require('./assets/img/favicon.ico')%>">
+  <title>museum</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <div class="img-logo"></div>
-                <span class="text-logo">louvre</span>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <div class="img-logo"></div>
+        <span class="text-logo">louvre</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#visiting" class="visiting-nav">Visiting</a></li>
+          <li><a href="#explore" class="explore-nav">Explore</a></li>
+          <li><a href="#video" class="video-nav">Video</a></li>
+          <li><a href="#gallery" class="gallery-nav">Gallery</a></li>
+          <li><a href="#tickets" class="tickets-nav">Tickets</a></li>
+          <li><a href="#contacts" class="contacts-nav">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="welcome-section">
+      <div class="container">
+
+        <div class="welcome-slider">
+          <div class="slider-content">
+            <div class="slider-img active">
+              <img src="<%=require('./assets/img/welcome-slider/1.jpg')%>" alt="Image 1">
+              <div class="slider-gradient"></div>
             </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#visiting" class="visiting-nav">Visiting</a></li>
-                    <li><a href="#explore" class="explore-nav">Explore</a></li>
-                    <li><a href="#video" class="video-nav">Video</a></li>
-                    <li><a href="#tickets" class="tickets-nav">Tickets</a></li>
-                    <li><a href="#contacts" class="contacts-nav">Contacts</a></li>
-                </ul>
-            </nav>
+            <div class="slider-img">
+              <img src="<%=require('./assets/img/welcome-slider/2.jpg')%>" alt="Image 2">
+              <div class="slider-gradient"></div>
+            </div>
+            <div class="slider-img">
+              <img src="<%=require('./assets/img/welcome-slider/3.jpg')%>" alt="Image 3">
+              <div class="slider-gradient"></div>
+            </div>
+            <div class="slider-img">
+              <img src="<%=require('./assets/img/welcome-slider/4.jpg')%>" alt="Image 4">
+              <div class="slider-gradient"></div>
+            </div>
+            <div class="slider-img">
+              <img src="<%=require('./assets/img/welcome-slider/5.jpg')%>" alt="Image 5">
+              <div class="slider-gradient"></div>
+            </div>
+          </div>
+          <div class="slider-control">
+            <div class="slider-number">
+              <span id="slider-number">01</span><span class="separator">|</span><span>05</span>
+            </div>
+            <div class="slider-dots-panel">
+              <div class="slider-dot active"></div>
+              <div class="slider-dot"></div>
+              <div class="slider-dot"></div>
+              <div class="slider-dot"></div>
+              <div class="slider-dot"></div>
+            </div>
+            <div class="slider-arrows">
+              <button id="btn-left"><img src="<%=require('./assets/svg/left.svg')%>" alt=""></button>
+              <button id="btn-right"><img src="<%=require('./assets/svg/left.svg')%>" alt=""></button>
+            </div>
+          </div>
+
         </div>
-    </header>
-    <main class="main">
-        <section class="welcome-section">
-            <div class="container">
-                <div class="welcome-txt">
-                    <h1 class="txt-heading">
-                        <p>Welcome</p>
-                        <p>to the Louvre</p>
-                    </h1>
-                    
-                    <p class="txt-description">From the castle to the museum</p>
-                </div>
-                <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
-                    class="welcome-button"><span>Discover the Louvre</span></a>
+        <div class="welcome-header">
+          <h1 class="txt-heading">
+            <p>Welcome</p>
+            <p>to the Louvre</p>
+          </h1>
+
+          <p class="txt-description">From the castle to the museum</p>
+          <a href="./tours/tour1.html"
+            class="welcome-button" target=" "><span>Discover the Louvre</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="visiting-section" id="visiting">
+      <div class="container">
+        <h2>Virtual tour</h2>
+        <div class="separation-line"></div>
+        <section class="visiting-cards">
+          <a class="visiting-card" href="./tours/tour2.html" target=" ">
+            <img src="<%=require('./assets/img/Royal Palace.jpg')%>" alt="Royal Palace">
+            <h3 class="visiting-name">Royal Palace</h3>
+            <div class="card-separation-line"></div>
+            <p class="visiting-type">360° Virtual Tour</p>
+            <p class="visiting-type-description">Google Street Panorama View</p>
+          </a>
+          <a class="visiting-card" href="./tours/tour3.html" target=" ">
+            <img src="<%=require('./assets/img/Denon Wing.jpg')%>" alt="Denon Wing">
+            <h3 class="visiting-name">Denon Wing</h3>
+            <div class="card-separation-line"></div>
+            <p class="visiting-type">360° Virtual Tour</p>
+            <p class="visiting-type-description">Google Street Panorama View</p>
+          </a>
+          <a class="visiting-card" href="./tours/tour4.html" target=" ">
+            <img src="<%=require('./assets/img/Colonnade Perrault.jpg')%>" alt="Colonnade Perrault">
+            <h3 class="visiting-name">Colonnade Perrault</h3>
+            <div class="card-separation-line"></div>
+            <p class="visiting-type">360° Virtual Tour</p>
+            <p class="visiting-type-description">Google Street Panorama View</p>
+          </a>
+          <a class="visiting-card" href="./tours/tour5.html" target=" ">
+            <img src="<%=require('./assets/img/Greek hall.jpg')%>" alt="Greek hall">
+            <h3 class="visiting-name">Greek hall</h3>
+            <div class="card-separation-line"></div>
+            <p class="visiting-type">360° Virtual Tour</p>
+            <p class="visiting-type-description">Google Street Panorama View</p>
+          </a>
+          <a class="visiting-card" href="./tours/tour6.html" target=" ">
+            <img src="<%=require('./assets/img/Mona Lisa.jpg')%>" alt="Mona Lisa">
+            <h3 class="visiting-name">Mona Lisa</h3>
+            <div class="card-separation-line"></div>
+            <p class="visiting-type">360° Virtual Tour</p>
+            <p class="visiting-type-description">Google Street Panorama View</p>
+          </a>
+          <a class="visiting-card" href="./tours/tour7.html" target=" ">
+            <img src="<%=require('./assets/img/Night Palace.jpg')%>" alt="Night Palace">
+            <h3 class="visiting-name">Night Palace</h3>
+            <div class="card-separation-line"></div>
+            <p class="visiting-type">360° Virtual Tour</p>
+            <p class="visiting-type-description">Google Street Panorama View</p>
+          </a>
+        </section>
+      </div>
+    </section>
+    <section class="explore-section" id="explore">
+      <div class="container">
+        <section class="explore-content">
+          <h2>Picture explore</h2>
+          <div class="separation-line"></div>
+          <article>
+            <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+            <p>It was cleaned in 1984 to remove a <span class="color-text">"yellow veil"</span> of dust that had
+              gathered since the previous restoration in the 19th century.</p>
+            <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because
+              it looked different.</p>
+          </article>
+        </section>
+        <img src="<%=require('./assets/img/Picture explore.jpg')%>" alt="Picture explore">
+      </div>
+    </section>
+    <section class="video-section" id="video">
+      <div class="container">
+        <div class="video-description">
+          <h2>Video journey</h2>
+          <div class="video-text">Enter and visit one of the most famous museums in the world and enjoy masterpieces
+            such as Mona Lisa or Hammurabi's Code</div>
+        </div>
+        <div class="video-player">
+          <div class="video-video">
+            <video src="<%=require('./assets/video/video0.mp4')%>" poster="<%=require('./assets/video/poster0.jpg')%>"></video>
+            <button class="video-play">
+              <img src="<%=require('./assets/svg/video-play-big.svg')%>" alt="">
+            </button>
+          </div>
+          <div class="video-control">
+            <button class="video-play">
+              <img src="<%=require('./assets/svg/video-play.svg')%>" alt="">
+            </button>
+            <input type="range">
+            <button class="video-volume">
+              <img src="<%=require('./assets/svg/video-volume.svg')%>" alt="">
+            </button>
+            <input type="range">
+            <button class="video-fullscreen">
+              <img src="<%=require('./assets/svg/video-fullscreen.svg')%>" alt="">
+            </button>
+          </div>
+        </div>
+        <div class="video-playlist">
+          <div class="video-slider">
+            <div class="slider-item active">
+              <video preload="none"  src="<%=require('./assets/video/video0.mp4')%>" poster="<%=require('./assets/video/poster0.jpg')%>"></video>
+              <img src="<%=require('./assets/svg/video-youtube-icon.svg')%>" alt="">
             </div>
-        </section>
-        <section class="visiting-section" id="visiting">
-            <div class="container">
-                <h2>Virtual tour</h2>
-                <div class="separation-line"></div>
-                <section class="visiting-cards">
-                    <div class="visiting-card">
-                        <img src="<%=require('./assets/img/Royal Palace.jpg')%>" alt="Royal Palace">
-                        <h3 class="visiting-name">Royal Palace</h3>
-                        <div class="card-separation-line"></div>
-                        <p class="visiting-type">360° Virtual Tour</p>
-                        <p class="visiting-type-description">Google Street Panorama View</p>
-                    </div>
-                    <div class="visiting-card">
-                        <img src="<%=require('./assets/img/Denon Wing.jpg')%>" alt="Denon Wing">
-                        <h3 class="visiting-name">Denon Wing</h3>
-                        <div class="card-separation-line"></div>
-                        <p class="visiting-type">360° Virtual Tour</p>
-                        <p class="visiting-type-description">Google Street Panorama View</p>
-                    </div>
-                    <div class="visiting-card">
-                        <img src="<%=require('./assets/img/Colonnade Perrault.jpg')%>" alt="Colonnade Perrault">
-                        <h3 class="visiting-name">Colonnade Perrault</h3>
-                        <div class="card-separation-line"></div>
-                        <p class="visiting-type">360° Virtual Tour</p>
-                        <p class="visiting-type-description">Google Street Panorama View</p>
-                    </div>
-                    <div class="visiting-card">
-                        <img src="<%=require('./assets/img/Greek hall.jpg')%>" alt="Greek hall">
-                        <h3 class="visiting-name">Greek hall</h3>
-                        <div class="card-separation-line"></div>
-                        <p class="visiting-type">360° Virtual Tour</p>
-                        <p class="visiting-type-description">Google Street Panorama View</p>
-                    </div>
-                    <div class="visiting-card">
-                        <img src="<%=require('./assets/img/Mona Lisa.jpg')%>" alt="Mona Lisa">
-                        <h3 class="visiting-name">Mona Lisa</h3>
-                        <div class="card-separation-line"></div>
-                        <p class="visiting-type">360° Virtual Tour</p>
-                        <p class="visiting-type-description">Google Street Panorama View</p>
-                    </div>
-                    <div class="visiting-card">
-                        <img src="<%=require('./assets/img/Night Palace.jpg')%>" alt="Night Palace">
-                        <h3 class="visiting-name">Night Palace</h3>
-                        <div class="card-separation-line"></div>
-                        <p class="visiting-type">360° Virtual Tour</p>
-                        <p class="visiting-type-description">Google Street Panorama View</p>
-                    </div>
-                </section>
+            <div class="slider-item active">
+              <video preload="none" src="<%=require('./assets/video/video1.mp4')%>" poster="<%=require('./assets/video/poster1.jpg')%>"></video>
+              <img src="<%=require('./assets/svg/video-youtube-icon.svg')%>" alt="">
             </div>
-        </section>
-        <section class="explore-section" id="explore">
-            <div class="container">
-                <section class="explore-content">
-                    <h2>Picture explore</h2>
-                    <div class="separation-line"></div>
-                    <article>
-                        <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading  artist of the Spanish Golden Age.</p>
-                        <p>It was cleaned in 1984 to remove a <span class="color-text">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-                        <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
-                    </article>
-                </section>
-                <img src="<%=require('./assets/img/Picture explore.jpg')%>" alt="Picture explore">
+            <div class="slider-item active">
+              <video preload="none" src="<%=require('./assets/video/video2.mp4')%>" poster="<%=require('./assets/video/poster2.jpg')%>"></video>
+              <img src="<%=require('./assets/svg/video-youtube-icon.svg')%>" alt="">
             </div>
-        </section>
-        <section class="video-section" id="video">
-            <div class="container">
-                <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU"  ></iframe>
-                <section class="video-content">
-                    <h2>Video journey</h2>
-                    <div class="video-text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</div>
-                </section>
+            <div class="slider-item">
+              <video preload="none" src="<%=require('./assets/video/video3.mp4')%>" poster="<%=require('./assets/video/poster3.jpg')%>"></video>
+              <img src="<%=require('./assets/svg/video-youtube-icon.svg')%>" alt="">
             </div>
-        </section>
-        <section class="tickets-section" id="tickets">
-            <div class="container"></div>
-        </section>
-        <section class="contacts-section" id="contacts">
-            <div class="container"></div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer-container"></div>
-    </footer>
+            <div class="slider-item">
+              <video preload="none" src="<%=require('./assets/video/video4.mp4')%>" poster="<%=require('./assets/video/poster4.jpg')%>"></video>
+              <img src="<%=require('./assets/svg/video-youtube-icon.svg')%>" alt="">
+            </div>
+          </div>
+          <div class="slider-control">
+            <button id="left">
+              <img src="<%=require('./assets/svg/video-left.svg')%>" alt="">
+            </button>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <button id="right">
+              <img src="<%=require('./assets/svg/video-right.svg')%>" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <h2>Art Gallery</h2>
+        <div class="picture-inner-container">
+          <img src="<%=require('./assets/img/gallery/galery1.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery2.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery3.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery4.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery5.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery6.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery7.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery8.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery9.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery10.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery11.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery12.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery13.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery14.jpg')%>" alt="">
+          <img src="<%=require('./assets/img/gallery/galery15.jpg')%>" alt="">
+        </div>
+      </div>
+      <div class="gallery-gradient"></div>
+    </section>
+    <section class="tickets-section" id="tickets">
+      <div class="container">
+        <h2>Buy Tickets</h2>
+        <div class="separation-line"></div>
+      </div>
+    </section>
+    <section class="contacts-section" id="contacts">
+      <div class="container">
+        <h2>Contacts</h2>
+        <div class="separation-line"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container"></div>
+  </footer>
 </body>
 
 </html>
